@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURRA SHRAVAN - Tax Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        /* Modal styles */
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .spinner {
+            border-top-color: #3498db;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">BURRA SHRAVAN</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="#articles" class="text-gray-600 hover:text-blue-600 transition duration-300">Articles</a>
+                <a href="#ai-assistant" class="text-gray-600 hover:text-blue-600 transition duration-300">AI Assistant</a>
+                <a href="#education" class="text-gray-600 hover:text-blue-600 transition duration-300">Education</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-gray-600"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600">Experience</a>
+            <a href="#articles" class="block py-2 text-gray-600 hover:text-blue-600">Articles</a>
+            <a href="#ai-assistant" class="block py-2 text-gray-600 hover:text-blue-600">AI Assistant</a>
+            <a href="#education" class="block py-2 text-gray-600 hover:text-blue-600">Education</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20 fade-in">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Dedicated & Experienced <span class="text-blue-600">Tax Analyst</span>
+                </h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Specializing in U.S. individual and business taxation, client advisory, and compliance. Committed to providing meticulous and timely financial services.
+                </p>
+                <div class="mt-8">
+                    <a href="#contact" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white rounded-2xl shadow-md -mt-10 fade-in" style="animation-delay: 0.2s;">
+            <div class="max-w-4xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">About Me</h3>
+                <div class="text-center text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        As a detail-oriented Tax Analyst with a strong foundation in both individual and business taxation, I bring a unique blend of analytical rigor and client-focused service. Since joining Magnus Tax Filing in December 2022, I have dedicated myself to mastering the intricacies of U.S. tax law, specializing in a wide range of forms including the 1040, 1065, and 1120 series.
+                    </p>
+                    <p>
+                        My background in Civil Engineering provides me with a robust problem-solving framework, which I leverage to assist clients with complex challenges such as new business incorporation, audit resolutions, and multi-level tax compliance. I am committed to delivering precise, timely, and strategic financial solutions that empower clients to navigate the tax landscape with confidence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 fade-in" style="animation-delay: 0.4s;">
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-4">Professional Experience</h3>
+                <p class="text-center text-gray-500 mb-12">My journey in the world of taxation.</p>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Tax Analyst</h4>
+                            <p class="text-blue-600 font-semibold">Magnus Tax Filing</p>
+                        </div>
+                        <span class="text-sm text-gray-500 font-medium">Dec 2022 - Present</span>
+                    </div>
+                    <p class="mt-4 text-gray-600" id="experience-description">
+                        As a key member of the Magnus team, I handle a diverse range of responsibilities in both business and individual taxation. My role is centered around providing comprehensive tax services and client support.
+                    </p>
+                    <h5 class="mt-6 mb-4 text-lg font-semibold text-gray-800">Core Competencies & Skills:</h5>
+                    <div class="flex flex-wrap gap-3" id="skills-container">
+                        <span class="skill-tag bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Form 1040, 1040NR, 1040X</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Form 1065 (Partnerships)</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Form 1120-S & 1120-C (Corps)</span>
+                        <span class="skill-tag bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">New Business Incorporation</span>
+                        <span class="skill-tag bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">Audit & Notice Resolution</span>
+                        <span class="skill-tag bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">Federal & State Tax Payments</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Sales Tax Filing</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Bookkeeping</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">BOI Filing</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">FBAR Filing</span>
+                        <span class="skill-tag bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full">Small Business Payroll</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="py-20 bg-gray-100 rounded-2xl fade-in" style="animation-delay: 0.6s;">
+            <div class="max-w-6xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-4">Tax Articles & Insights</h3>
+                <p class="text-center text-gray-500 mb-12">Exploring key topics in the world of taxation.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Article 1 -->
+                    <a href="https://www.linkedin.com/posts/burrashravan23500_taxpolicy-publicfinance-accounting-activity-7328148004715003905-O1ci?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="article-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1503303491959-94d3a5f45238?q=80&w=2070&auto=format&fit=crop" alt="Tax Policy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/DBEAFE/1E3A8A?text=Tax+Policy';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Tax Policy Watch: One Big Beautiful Bill</h4>
+                            <p class="text-gray-600 text-sm flex-grow">A look into the key provisions affecting individuals and businesses from recent major tax legislation.</p>
+                            <p class="mt-4 text-blue-600 font-semibold hover:text-blue-800 self-start">Read More &rarr;</p>
+                        </div>
+                    </a>
+                    <!-- Article 2 -->
+                    <a href="https://www.linkedin.com/posts/burrashravan23500_should-remittances-be-taxed-how-would-this-activity-7333236592511254528-ijbZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="article-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=2070&auto=format&fit=crop" alt="Remittances" onerror="this.onerror=null;this.src='https://placehold.co/600x400/D1FAE5/065F46?text=Remittances';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Should Remittances Be Taxed?</h4>
+                            <p class="text-gray-600 text-sm flex-grow">Exploring the complex debate around taxing remittances and the potential impact on global families and economies.</p>
+                            <p class="mt-4 text-blue-600 font-semibold hover:text-blue-800 self-start">Read More &rarr;</p>
+                        </div>
+                    </a>
+                    <!-- Article 3 -->
+                    <a href="https://www.linkedin.com/posts/burrashravan23500_taxseason-form1040-form1040nr-activity-7335926894615306241-EzKK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="article-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1554224154-260328c04785?q=80&w=2070&auto=format&fit=crop" alt="Tax Forms" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FEF3C7/92400E?text=Tax+Forms';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Behind the 1040: A World of Forms</h4>
+                            <p class="text-gray-600 text-sm flex-grow">A simple tax return can be deceptive. Uncover the numerous schedules and forms that might be required.</p>
+                            <p class="mt-4 text-blue-600 font-semibold hover:text-blue-800 self-start">Read More &rarr;</p>
+                        </div>
+                    </a>
+                    <!-- Article 4 -->
+                    <a href="https://www.linkedin.com/posts/burrashravan23500_realestate-taxplanning-rentalincome-activity-7337953936705785856-_tEt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="article-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop" alt="Real Estate" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E5E7EB/4B5563?text=Real+Estate';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="font-bold text-lg mb-2 text-gray-900">Invest in a House to Save Taxes</h4>
+                            <p class="text-gray-600 text-sm flex-grow">How strategic real estate investment can lower your tax burden while rent covers the mortgage.</p>
+                            <p class="mt-4 text-blue-600 font-semibold hover:text-blue-800 self-start">Read More &rarr;</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AI Assistant Section -->
+        <section id="ai-assistant" class="py-20 bg-blue-50 rounded-2xl fade-in" style="animation-delay: 0.8s;">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <i class="fas fa-robot text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Interactive AI Assistant</h3>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Leverage the power of AI to see how my skills can fit your needs. These tools use the Gemini API to provide insights based on my professional profile.
+                </p>
+                <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+                    <button id="generate-letter-btn" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                        <span class="mr-2">?</span> Generate Cover Letter
+                    </button>
+                    <button id="suggest-paths-btn" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 border border-blue-200 transition duration-300 flex items-center justify-center">
+                        <span class="mr-2">?</span> Suggest Career Paths
+                    </button>
+                    <button id="analyze-scenario-btn" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 border border-blue-200 transition duration-300 flex items-center justify-center">
+                        <span class="mr-2">?</span> Analyze Tax Scenario
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="py-20 fade-in" style="animation-delay: 1s;">
+            <div class="max-w-5xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Education & Certifications</h3>
+                <div class="grid md:grid-cols-2 gap-10">
+                    
+                    <!-- Education Column -->
+                    <div>
+                        <h4 class="text-2xl font-bold mb-6 text-gray-800">Academic Background</h4>
+                        <div class="space-y-6">
+                            <!-- B.Tech -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                                <p class="text-sm text-gray-500">2019 - 2023</p>
+                                <h5 class="font-bold text-lg text-blue-600">Bachelor of Technology, Civil Engineering</h5>
+                                <p class="text-gray-700">CMR Institute of Technology</p>
+                                <p class="text-sm text-gray-600">Aggregate: 63.37%</p>
+                                <div class="mt-3 pt-3 border-t border-gray-200">
+                                    <a href="https://www.linkedin.com/posts/burrashravan23500_nss-nssindia-jntuhnss-activity-7060602747976355840-eWgR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-green-600 hover:text-green-700 transition duration-300 inline-block">
+                                        <i class="fas fa-award mr-2"></i>Awarded Best NSS Volunteer for 2023
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div>
+                        <h4 class="text-2xl font-bold mb-6 text-gray-800">Professional Certifications</h4>
+                        <div class="space-y-6">
+                            <!-- Coursera Cert -->
+                            <a href="https://www.linkedin.com/posts/burrashravan23500_certificationachieved-taxationexpertise-continuouslearning-activity-7140755280086093824-337m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk5kMUBygYK8gtZtQTD3C8ylFnqRYqWCp8" target="_blank" rel="noopener noreferrer" class="block bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full hover:shadow-lg transition duration-300">
+                                <div class="flex items-center mb-3">
+                                    <img src="https://placehold.co/50x50/EBF4FF/1D4ED8?text=UI" alt="University of Illinois Logo" class="rounded-full mr-4">
+                                    <div>
+                                        <h5 class="font-bold text-lg text-blue-600">Federal Taxation 1</h5>
+                                        <p class="text-gray-700">University of Illinois at Urbana-Champaign</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">Issued by <span class="font-semibold">Coursera</span>. This certification provided a strong foundation in federal tax principles and practices.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 fade-in" style="animation-delay: 1.2s;">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-4">Let's Connect</h3>
+                <p class="text-gray-600 mb-8">
+                    I am open to discussing new opportunities or collaborating on projects. Feel free to reach out.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 text-lg">
+                    <a href="mailto:shravangoud23500@gmail.com" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>shravangoud23500@gmail.com</span>
+                    </a>
+                    <a href="tel:+917093535610" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>+91 7093535610</span>
+                    </a>
+                </div>
+                 <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/burrashravan23500/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 text-2xl transition duration-300"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 BURRA SHRAVAN. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-1">Built with HTML & Tailwind CSS. AI features powered by Gemini.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for AI Content -->
+    <div id="ai-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden modal-backdrop opacity-0">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col modal-content opacity-0 transform scale-95">
+            <div class="flex justify-between items-center p-5 border-b border-gray-200">
+                <h4 id="modal-title" class="text-xl font-bold text-gray-800">AI Generated Content</h4>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="modal-body" class="p-6 overflow-y-auto">
+                <!-- Input form for scenario analyzer -->
+                <div id="modal-input-form" class="hidden">
+                    <p class="text-gray-600 mb-4">Describe a brief tax situation below (e.g., "A client wants to start an LLC with a partner and hire one employee"). The AI will provide a high-level analysis based on my skills.</p>
+                    <textarea id="scenario-input" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" rows="5" placeholder="Enter tax scenario here..."></textarea>
+                    <div id="scenario-error" class="text-red-500 text-sm mt-2 hidden">Please enter a scenario.</div>
+                    <button id="submit-scenario-btn" class="mt-4 w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                        Analyze Scenario
+                    </button>
+                </div>
+                <!-- Loading spinner -->
+                <div id="loading-spinner" class="flex justify-center items-center h-48">
+                    <div class="spinner w-12 h-12 rounded-full border-4 border-gray-200"></div>
+                </div>
+                <!-- Generated content -->
+                <div id="modal-result" class="text-gray-700 leading-relaxed whitespace-pre-wrap" style="font-family: 'Inter', sans-serif;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // --- AI Assistant & Modal Logic ---
+        const generateLetterBtn = document.getElementById('generate-letter-btn');
+        const suggestPathsBtn = document.getElementById('suggest-paths-btn');
+        const analyzeScenarioBtn = document.getElementById('analyze-scenario-btn');
+        
+        const modal = document.getElementById('ai-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalResult = document.getElementById('modal-result');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const modalContent = document.querySelector('.modal-content');
+
+        const modalInputForm = document.getElementById('modal-input-form');
+        const scenarioInput = document.getElementById('scenario-input');
+        const submitScenarioBtn = document.getElementById('submit-scenario-btn');
+        const scenarioError = document.getElementById('scenario-error');
+
+
+        // Function to hide all dynamic content areas in the modal
+        const hideModalContent = () => {
+            loadingSpinner.style.display = 'none';
+            modalResult.style.display = 'none';
+            modalInputForm.style.display = 'none';
+            scenarioError.classList.add('hidden');
+        };
+
+        // Function to open the modal
+        const openModal = () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modalContent.classList.add('opacity-100', 'scale-100');
+            }, 10);
+        };
+
+        // Function to close the modal
+        const closeModal = () => {
+            modal.classList.remove('opacity-100');
+            modalContent.classList.remove('opacity-100', 'scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalResult.innerHTML = ''; // Clear previous results
+                scenarioInput.value = ''; // Clear textarea
+            }, 300);
+        };
+        
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Function to get portfolio context
+        const getPortfolioContext = () => {
+            const experience = document.getElementById('experience-description').innerText;
+            const skills = Array.from(document.querySelectorAll('#skills-container .skill-tag')).map(tag => tag.innerText).join(', ');
+            return `
+                Candidate Name: BURRA SHRAVAN
+                Role: Tax Analyst
+                Experience Summary: ${experience}
+                Core Skills: ${skills}
+            `;
+        };
+
+        // Function to call Gemini API
+        const callGeminiAPI = async (prompt) => {
+            const apiKey = ""; // Leave empty, handled by environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{
+                    role: "user",
+                    parts: [{ text: prompt }]
+                }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorBody = await response.text();
+                    throw new Error(`API Error: ${response.status} ${response.statusText} - ${errorBody}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    console.error("Unexpected API response structure:", result);
+                    return "Sorry, I couldn't generate a response. The API returned an unexpected format.";
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                return `An error occurred while contacting the AI assistant. Please check the console for details.`;
+            }
+        };
+        
+        // Event listener for "Generate Cover Letter"
+        generateLetterBtn.addEventListener('click', async () => {
+            hideModalContent();
+            modalTitle.innerText = 'AI-Generated Cover Letter';
+            loadingSpinner.style.display = 'flex';
+            openModal();
+
+            const context = getPortfolioContext();
+            const prompt = `Based on the following professional profile, write a concise and professional cover letter for a Tax Analyst position. The letter should be addressed to a "Hiring Manager". Highlight the key skills and experience in a compelling way. Keep it under 250 words.\n\nProfile:\n${context}`;
+            
+            const resultText = await callGeminiAPI(prompt);
+            
+            loadingSpinner.style.display = 'none';
+            modalResult.innerText = resultText;
+            modalResult.style.display = 'block';
+        });
+
+        // Event listener for "Suggest Career Paths"
+        suggestPathsBtn.addEventListener('click', async () => {
+            hideModalContent();
+            modalTitle.innerText = 'Suggested Career Paths';
+            loadingSpinner.style.display = 'flex';
+            openModal();
+
+            const context = getPortfolioContext();
+            const prompt = `Given the following profile of a Tax Analyst, suggest 3-5 potential career advancement paths or specializations. For each path, provide a brief (1-2 sentence) description of the role and why it's a good fit based on the candidate's current skills. Format the output with clear headings for each path.\n\nProfile:\n${context}`;
+            
+            const resultText = await callGeminiAPI(prompt);
+
+            loadingSpinner.style.display = 'none';
+            modalResult.innerText = resultText;
+            modalResult.style.display = 'block';
+        });
+
+        // Event listener for "Analyze Tax Scenario" button
+        analyzeScenarioBtn.addEventListener('click', () => {
+            hideModalContent();
+            modalTitle.innerText = 'AI Tax Scenario Analyzer';
+            modalInputForm.style.display = 'block'; // Show the form
+            openModal();
+        });
+
+        // Event listener for submitting the scenario from within the modal
+        submitScenarioBtn.addEventListener('click', async () => {
+            const userScenario = scenarioInput.value;
+            if (!userScenario.trim()) {
+                scenarioError.classList.remove('hidden');
+                return;
+            }
+            scenarioError.classList.add('hidden');
+
+            hideModalContent();
+            loadingSpinner.style.display = 'flex';
+
+            const context = getPortfolioContext();
+            const prompt = `You are an AI assistant reflecting the expertise of BURRA SHRAVAN, a skilled US Tax Analyst. Based on his profile, provide a high-level analysis of the following user-submitted tax scenario. Focus on identifying key issues, relevant tax forms, and compliance considerations that Shravan would likely handle. Frame the response as a professional, preliminary analysis. Start the response with a disclaimer that this is not financial advice and is for illustrative purposes only.
+
+**Shravan's Profile for Context:**
+${context}
+
+**User's Scenario:**
+"${userScenario}"
+
+**Your Task:**
+1.  Start with the disclaimer.
+2.  Break down the scenario into key areas (e.g., Business Structure, Payroll, Federal Filings, State Filings).
+3.  Mention specific tax forms (e.g., Form 1065, 1120-S, 941) where relevant.
+4.  Conclude by stating how Shravan's experience is well-suited to address these points.
+    `;
+            
+            const resultText = await callGeminiAPI(prompt);
+            
+            loadingSpinner.style.display = 'none';
+            modalResult.innerText = resultText;
+            modalResult.style.display = 'block';
+        });
+
+    </script>
+
+</body>
+</html>
